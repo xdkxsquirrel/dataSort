@@ -13,6 +13,8 @@ The image will be built with a name gdb-cpp-image. To run a container based on t
 
 **docker run -d -p 2222:22 --security-opt seccomp:unconfined -v $PWD:/source --name gdb-cpp-image gdb-cpp-image**
 
+I replaced the $PWD with the full directory path and it liked it a lot more.
+
 The -d parameter detaches the Docker container from the terminal. The -p parameter links the port 2222 to the exposed 22 port of the container. As debugging requires running privileged operations, you'll run the container in unconfined mode, thus the --security-opt set to seccomp:unconfined. The -v parameter creates a bind mount that maps the local file system ($PWD - print working directory) into the container (/source). Therefore, you need to be inside the source code folder while you run this command, or you can change the $PWD value with a full path to the source directory.
 
 ### Building C in a container with VS Code:
