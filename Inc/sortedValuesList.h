@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
-#include "Inc/maxHeap.h"
+#include "Inc/minHeap.h"
 
 #define SIZE_OF_HEAP                        32
 

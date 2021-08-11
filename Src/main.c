@@ -6,8 +6,8 @@ static FILE* output;
 int main()
 {
     initFiles( );
-    initLastValuesList( );
     initSortedValuesList( );
+    initLastValuesList( );
 
     uint16_t nextValue;
     while( getNextValue( &nextValue ) )
@@ -26,8 +26,8 @@ int main()
 
 void initFiles( void )
 {
-    input = fopen( "test1.bin", "r" );
-    output = fopen( "test1.out", "w+" );
+    input = fopen( "test3.bin", "r" );
+    output = fopen( "test3.out", "w+" );
 }
 
 void deInitFiles( void )
