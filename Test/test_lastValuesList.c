@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include "lastValuesList.h"
+#include "queue.h"
 
 void test_initLastValuesList( void )
 {
