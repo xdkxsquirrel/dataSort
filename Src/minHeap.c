@@ -1,4 +1,4 @@
-#include "Inc/minHeap.h"
+#include "minHeap.h"
 
 static bool isFull( Heap* heap );
 static uint8_t getParentIdx( uint8_t childIdx );

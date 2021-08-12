@@ -1,4 +1,4 @@
-#include "Inc/queue.h"
+#include "queue.h"
 
 static bool isFull( Queue* queue );
 static bool isEmpty( Queue* queue );

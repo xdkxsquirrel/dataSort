@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 #include <stdio.h>
-#include "Inc/queue.h"
+#include "queue.h"
 
 #define SIZE_OF_QUEUE                        32
 

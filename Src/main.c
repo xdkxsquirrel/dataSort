@@ -1,11 +1,16 @@
-#include "Inc/main.h"
+#include "main.h"
 
 static FILE* input;
 static FILE* output;
 
-int main()
+int main( int argc, char *argv[] )
 {
-    initFiles( );
+    if( argc != 3 )
+    {
+        printf( "dataSort requires two arguments. 1) The incoming data filename and 2) the filename to print to.\n");
+        return 1;
+    }
+    initFiles( argv[1], argv[2] );
     initSortedValuesList( );
     initLastValuesList( );
 
@@ -24,10 +29,10 @@ int main()
     return 0;
 }
 
-void initFiles( void )
+void initFiles( char* inputFileName, char* outputFileName )
 {
-    input = fopen( "test3.bin", "r" );
-    output = fopen( "test3.out", "w+" );
+    input = fopen( inputFileName, "r" );
+    output = fopen( outputFileName, "w+" );
 }
 
 void deInitFiles( void )
