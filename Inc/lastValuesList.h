@@ -11,5 +11,7 @@ void initLastValuesList( void );
 void deInitLastValuesList( void );
 void addCurrentValueToLastValuesList( uint16_t currentValue );
 void printLastValuesList( FILE* output );
+uint8_t getQueueSize( void );
+uint16_t getValueFromLastValuesList( void );
 
 #endif /* __LASTVALUESLIST_H__ */

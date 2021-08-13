@@ -26,3 +26,13 @@ void printLastValuesList( FILE* output )
         fprintf( output, "%d\n", dequeue( lastValuesList ) );
     }
 }
+
+uint8_t getQueueSize( void )
+{
+    return lastValuesList->size;
+}
+
+uint16_t getValueFromLastValuesList( void )
+{  
+    return dequeue( lastValuesList );
+}

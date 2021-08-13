@@ -48,12 +48,20 @@ void insert( Heap* heap, uint16_t item )
 
 void printHeap( FILE* output, Heap* heap )
 {
+    // If the Heap isn't full that means it has never been sorted.
     if( firstTimeFull )
     {
         buildMinHeap( heap );
         firstTimeFull = false;
     }
     heap->capacity = heap->size;
+
+    /* Prints the top of the heap (which is the lowest number)
+       Then adds an arbitrarily large number to the heap which 
+       will end up not being printed as the smaller values get
+       moved to the front of the stack as insertion then heapify
+       take place. Since we are always printing the zeroith value
+       it will always be the smallest value in the heap */
     for( int i = 0; i < heap->size; i++ ) 
     {
         fprintf( output, "%d\n", heap->arr[0] );

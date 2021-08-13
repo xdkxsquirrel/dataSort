@@ -22,3 +22,13 @@ void printSortedValuesList( FILE* output )
     fprintf( output, "--Sorted Max 32 Values--\n" );
     printHeap( output, sortedValuesList );
 }
+
+uint8_t getHeapSize( void )
+{
+    return sortedValuesList->size;
+}
+
+uint16_t getHeapArrValueAtIndex( uint8_t idx )
+{
+    return sortedValuesList->arr[idx];
+}

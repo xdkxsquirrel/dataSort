@@ -21,6 +21,8 @@ void destroyQueue( Queue* queue )
 
 void enqueue( Queue* queue, uint16_t item )
 {
+    /* Because this queue will want to stay at a maximum value of SIZE_OF_QUEUE
+       we dequeue and forget the earliest value added to the queue. */
     if( isFull( queue ) )
     {
         dequeue( queue );

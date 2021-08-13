@@ -13,7 +13,7 @@
 #define FOUR_BIT_TO_TWELVE_BIT             8
 #define STRIP_FIRST_FOUR_BITS              15
 
-void initFiles( char* inputFileName, char* outputFileName );
+bool initFiles( char* inputFileName, char* outputFileName );
 void deInitFiles( void );
 bool getNextValue( uint16_t *nextValue );
 
