@@ -8,11 +8,11 @@ int main( int argc, char *argv[] )
     if( argc != 3 )
     {
         printf( "dataSort requires two arguments. 1) The incoming data filename and 2) the filename to print to (with extensions).\n");
-        return 1;
+        return -1;
     }
     if( initFiles( argv[1], argv[2] ) )
     {
-        return 1;
+        return -1;
     }
     initSortedValuesList( );
     initLastValuesList( );
